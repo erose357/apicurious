@@ -28,6 +28,8 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'awesome_print'
+  gem 'simplecov'
+  gem 'factory_girl_rails'
 end
 
 group :development do
