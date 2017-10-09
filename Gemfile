@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'omniauth'
 gem 'omniauth-github'
 gem 'figaro'
 gem 'faraday'
@@ -30,6 +31,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'simplecov'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 group :development do
