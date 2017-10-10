@@ -18,13 +18,13 @@ RSpec.describe User, type: :model do
       auth = {
         provider: "github",
         uid:      "12345678",
+        credentials: {
+            token: "faketesttoken"
+          },
         info: {
           nickname: "unit_test",
           email:    "unit_test@email.com",
-          name:     "The Fake Dude",
-          credentials: {
-            token: "faketesttoken"
-          }
+          name:     "The Fake Dude"
         }
       }
       User.update_or_create(auth)

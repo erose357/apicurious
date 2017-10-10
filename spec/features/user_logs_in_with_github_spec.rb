@@ -17,6 +17,7 @@ def stub_omniauth
   OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
     "provider" => "github",
     "uid" => "12345678",
+    "credentials" => { "token" => "biglongfaketokenmadeupfortest" },
     "info" => {
       "nickname" => "test123",
       "email"    => "test@email.com",
@@ -24,9 +25,6 @@ def stub_omniauth
       "urls" => {
         "Github" => "www.fake-github.com"
       },
-      "credentials" => {
-        "token" => "biglongfaketokenmadeupfortest"
-      }
     }
   })
 end
