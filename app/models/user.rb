@@ -14,7 +14,7 @@ class User < ApplicationRecord
       nickname: auth_hash[:info][:nickname],
       email:    auth_hash[:info][:email],
       name:     auth_hash[:info][:name],
-      token: auth_hash[:info][:credentials][:token]
+      token: auth_hash[:credentials][:token]
     }
     user.save!
     user
