@@ -4,6 +4,7 @@ class DashboardIndexService
   end
 
   def repos
+    #raw_repos = GithubService.new(user).repos
     conn = Faraday.new(url: "https://api.github.com") do |faraday|
       faraday.headers["Authorization"] = "token #{user.token}"
       faraday.adapter Faraday.default_adapter

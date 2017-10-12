@@ -8,10 +8,11 @@ feature "Authenticated user" do
                         email:    'fakeemail@email.com',
                         name:     'thedude',
                         token:    ENV['github_user_token']) }
+
   context "visits their dashboard page" do
     it "sees a list of their repositories" do
       VCR.use_cassette("user_repos") do
-    
+
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
         visit "/dashboard"
