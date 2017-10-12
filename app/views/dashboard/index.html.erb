@@ -3,14 +3,17 @@
   <div class="col-md-3">
     <div class="panel panel-default">
       <!-- Default panel contents -->
-      <div class="panel-heading">Panel heading</div>
+      <div class="panel-heading">User Info</div>
       <div class="panel-body">
-        <p>...</p>
+        <img src=<%= @dashboard_index.user_info.picture %> class="picture">
+        <p class="name"><%= @dashboard_index.user_info.name %></p>
+        <p class="email"><%= @dashboard_index.user_info.email %></p>
+        <p class="login"><%= @dashboard_index.user_info.login %></p>
       </div>
 
       <!-- List group -->
       <ul class="list-group">
-        <% @repos.each do |repo| %>
+        <% @dashboard_index.repos.each do |repo| %>
           <li class="repo"><%= repo.name %></li>
         <% end %>
       </ul>
