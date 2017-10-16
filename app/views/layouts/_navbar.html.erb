@@ -4,7 +4,7 @@
       </button> 
       <a class="navbar-brand" href="#">Brand</a>
       <% if current_user.nil? %>
-        <button class="btn default-btn navbar-btn"><%= link_to "Sign in with Github", '/auth/github' %></button>
+        <button class="btn default-btn navbar-btn"><%= link_to "Sign in with Github", '/auth/github?scope=user%20read:org%20repo' %></button>
       <% else %>
         <button class="btn default-btn navbar-btn"><%= link_to "Logout", logout_path %></button>
       <% end %>

@@ -5,17 +5,17 @@
       <!-- Default panel contents -->
       <div class="panel-heading">User Info</div>
       <div class="panel-body">
-        <img src=<%= @dashboard_index.user_info.picture %> class="picture">
+        <img src=<%= @dashboard_index.user_info.picture %> class="picture" height="200" width="200">
         <p class="name"><%= @dashboard_index.user_info.name %></p>
         <p class="email"><%= @dashboard_index.user_info.email %></p>
         <p class="login"><%= @dashboard_index.user_info.login %></p>
       </div>
 
       <!-- List group -->
-      <ul class="list-group">
-        <% @dashboard_index.repos.each do |repo| %>
-          <li class="repo"><%= repo.name %></li>
-        <% end %>
+      <%#<ul class="list-group">%>
+        <%#<% @dashboard_index.repos.each do |repo| %>%>
+          <%#<li class="repo"><%= repo.name %></li>%>
+        <%#<% end %>%>
       </ul>
     </div>
   </div>
@@ -29,11 +29,9 @@
 
       <!-- List group -->
       <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <% @dashboard_index.repos.each do |repo| %>
+          <li class="list-group-item"><%= repo.name %></li>
+      <% end %>
       </ul>
     </div>
   </div>
